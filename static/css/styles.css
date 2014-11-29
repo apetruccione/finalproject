@@ -27,7 +27,7 @@ input[type=submit]{
   margin-top:15px;
   margin-left:85px;
 }
-#leftcolumn { width: 500px; border: 1px solid blue; float: left;}
-#rightcolumn { width: 900px; border: 1px solid green; float: right;}
+#leftcolumn { width: 30%; border: 1px solid blue; float: left;}
+#rightcolumn { width: 65%; border: 1px solid green; float: right;}
 #detaileditem {border: 2px solid grey; margin: 5px;}
 .clearfix { clear: both;}
