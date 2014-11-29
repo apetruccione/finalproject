@@ -1,0 +1,33 @@
+div.form-container{
+  display: inline-block;
+  border: 4px ridge blue;
+  width: 280px;
+  border-radius:10px;
+  margin:10px;
+}
+p.form-header{
+  margin:0px;
+  font: 24px bold;
+  color:white;  background:blue;
+  text-align:center;
+}
+form{
+  margin:10px;
+}
+label{ width:80px; display: inline-block;}
+input{
+  border: 3px ridge blue;
+  border-radius:5px;
+  padding:3px;
+}
+input[type=submit]{
+  font: 18px bold;
+  width: 120px;
+  color:white;  background:blue;
+  margin-top:15px;
+  margin-left:85px;
+}
+#leftcolumn { width: 500px; border: 1px solid blue; float: left;}
+#rightcolumn { width: 900px; border: 1px solid green; float: right;}
+#detaileditem {border: 2px solid grey; margin: 5px;}
+.clearfix { clear: both;}

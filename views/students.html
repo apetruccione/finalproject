@@ -1,0 +1,71 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <title>Students Listing</title>
+  <link rel="stylesheet" type="text/css" 
+      href="/static/css/styles.css" />
+</head>
+<body>
+
+    <div ng-controller="myController">
+    <h2>Here is a list of students.</h2>
+
+    <div id="wrapper">
+
+    <div id="leftcolumn">
+    <div ng-repeat="stu in student">
+
+    <p>
+        {{stu.fname}}
+        {{stu.lname}} <br>
+        {{stu.email}} <br>
+        {{stu.username}} <br>
+
+        <form ng-submit="Details(stu.username)">
+          <input type="submit" value="Student Details">    
+        </form>
+    </p>
+    </div> <!--end ng-repeat -->
+    </div> <!--end left column -->
+
+      <div id="rightcolumn">
+        {{singleStudent.fname}}
+        {{singleStudent.lname}} <br>
+        {{singleStudent.email}} <br>
+        {{singleStudent.username}} <br>
+          <div id="detaileditem" ng-repeat="detail in singleStudent.items">
+            <strong>{{detail.itemtype}}</strong> <br>
+            {{detail.itemname}} <br>
+            {{detail.itemdescription}} <br>
+          </div>          
+        <br>
+
+      <form ng-submit="ShowDetailsForm()">
+          <input type="submit" value="Add an Item">    
+      </form>
+      <form ng-show="detailInput"  ng-submit="AddDetailItem(singleStudent.username)">
+          <label for="inputtype">Item Type</label>
+          <input ng-model="detailItemType" type="text" id="inputtype" placeholder="Item type:"><br>
+          <label for="inputname">Item Name</label>
+          <input ng-model="detailItemName" type="text" id="inputname" placeholder="Item name:"><br>
+          <label for="description">Description</label>
+          <input ng-model="detailItemDescription" type="textarea" id="description" placeholder="Item description:">
+          <input type="submit" value="Submit Item">    
+          
+
+      </form>
+
+      </div>
+
+
+
+      <div class="clearfix"></div> <!-- clear fix for floating divs -->
+
+
+    </div> <!-- end container -->
+    </div> <!--end myController -->
+  
+  <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+  <script src="/static/js/my_app.js"></script>
+</body>
+</html>

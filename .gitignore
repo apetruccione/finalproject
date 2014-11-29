@@ -1,0 +1,4 @@
+# have git ignore these directories
+
+data/
+node_modules/
