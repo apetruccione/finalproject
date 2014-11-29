@@ -60,6 +60,8 @@ module.exports = function(app) {
   app.get('/students', students.getStudentsList);
   app.get('/student/byID', students.getStudentByUsername);
   app.get('/student/addItem', students.addItem);
+  app.get('/student/removeItem', students.removeItem);
+
 
   app.get('/singleStudent', function(req, res){
     res.render('singleStudent');

@@ -37,6 +37,9 @@
             <strong>{{detail.itemtype}}</strong> <br>
             {{detail.itemname}} <br>
             {{detail.itemdescription}} <br>
+            <form ng-submit="RemoveDetailItem(singleStudent.username, $index)">
+              <input type="submit" value="Remove Item">    
+            </form>
           </div>          
         <br>
 
@@ -50,8 +53,7 @@
           <input ng-model="detailItemName" type="text" id="inputname" placeholder="Item name:"><br>
           <label for="description">Description</label>
           <input ng-model="detailItemDescription" type="textarea" id="description" placeholder="Item description:">
-          <input type="submit" value="Submit Item">    
-          
+          <input type="submit" value="Submit Item">          
 
       </form>
 

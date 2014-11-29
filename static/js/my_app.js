@@ -60,6 +60,28 @@ var finalapp = angular.module('myApp', []);
 
 
             }; // end add details function
+
+
+            $scope.RemoveDetailItem = function(username, index){            
+                console.log("I will remove a detail item from " + username);
+                console.log("Item Type: " + $scope.detailItemType);
+                console.log("Item Name: " + $scope.detailItemName);
+                console.log("Item Description: " + $scope.detailItemDescription);
+
+            $http.get('/student/removeItem?username=' + username + "&itemindex=" + index)
+            .success(function(data, status, headers, config) {
+                $scope.singleStudent = data;
+                $scope.error = "";
+
+            }).
+            error(function(data, status, headers, config) {
+                $scope.singleStudent = {};
+                $scope.error = data;
+            });
+
+
+            }; // end add details function
+
         }
 ]);
     finalapp.controller('userController', ['$scope', '$http',
