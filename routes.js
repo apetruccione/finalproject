@@ -10,7 +10,7 @@ module.exports = function(app) {
       use('/lib', express.static( './lib')
   );
 
-/*
+
   app.get('/', function(req, res){
     if (req.session.user) {
       res.render('index', {username: req.session.username,
@@ -20,12 +20,17 @@ module.exports = function(app) {
       res.redirect('/login');
     }
   });
-  */
   
+  /*
     app.get('/', function(req, res){
     res.render('students');
   });
-  
+  */
+
+  app.get('/startapp', function(req, res){
+    res.render('students');
+  });
+
   app.get('/user', function(req, res){
     if (req.session.user) {
       res.render('user', {msg:req.session.msg});
