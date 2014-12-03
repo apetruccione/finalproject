@@ -1,14 +1,14 @@
 div.form-container{
   display: inline-block;
-  border: 4px ridge blue;
-  width: 280px;
+  border: 4px ridge grey;
+  width: 280px; 
   border-radius:10px;
   margin:10px;
 }
 p.form-header{
   margin:0px;
   font: 24px bold;
-  color:white;  background:blue;
+  color:white;  background:maroon;
   text-align:center;
 }
 form{
@@ -16,18 +16,18 @@ form{
 }
 label{ width:80px; display: inline-block;}
 input{
-  border: 3px ridge blue;
+  border: 3px ridge black;
   border-radius:5px;
   padding:3px;
 }
 input[type=submit]{
   font: 18px bold;
   width: 120px;
-  color:white;  background:blue;
+  color:white;  background:maroon;
   margin-top:15px;
   margin-left:85px;
 }
-#leftcolumn { width: 30%; border: 1px solid blue; float: left;}
-#rightcolumn { width: 65%; border: 1px solid green; float: right;}
+#leftcolumn { width: 30%; border: 1px solid maroon; float: left;}
+#rightcolumn { width: 65%; border: 1px solid maroon; float: right;}
 #detaileditem {border: 2px solid grey; margin: 5px;}
 .clearfix { clear: both;}
