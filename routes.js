@@ -66,6 +66,7 @@ module.exports = function(app) {
   app.get('/student/byID', students.getStudentByUsername);
   app.get('/student/addItem', students.addItem);
   app.get('/student/removeItem', students.removeItem);
+  app.get('/student/editItem', students.startEditItem);
 
 
   app.get('/singleStudent', function(req, res){

@@ -99,3 +99,35 @@ exports.removeItem = function(req, res) {
   
 };
 
+exports.startEditItem = function(req, res) {
+ 
+    var url_parts = url.parse(req.url, true);
+    var query = url_parts.query; 
+    
+    console.log("Editing item from student list.")
+    console.log('\nQuery URL: ' + req.originalUrl);
+    console.log(query.username);
+    console.log(query.itemindex);
+ 
+
+    var search = Student.find({'username': query.username});
+    search.exec(function(err, docs) {
+    if (err) {
+        console.log(err);
+    }
+
+    // console.log(docs[0].items);
+    res.json(docs[0].items[query.itemindex]);
+
+    docs[0].items[query.itemindex].remove();
+
+    docs[0].save(function (err) {
+    if (!err)
+    console.log('Success!');
+    });
+
+
+    });
+  
+};
+

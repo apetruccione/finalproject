@@ -82,6 +82,29 @@ var finalapp = angular.module('myApp', []);
 
             }; // end add details function
 
+            $scope.EditDetailItem = function(username, index){            
+                console.log("I will edit a detail item from " + username);
+
+
+            $http.get('/student/editItem?username=' + username + "&itemindex=" + index)
+            .success(function(data, status, headers, config) {
+                
+                $scope.detailItemType = data.itemtype;
+                $scope.detailItemDescription = data.itemdescription;
+                $scope.detailItemName = data.itemname;
+                $scope.error = "";
+                $scope.detailInput = true;
+
+            }).
+            error(function(data, status, headers, config) {
+                $scope.singleStudent = {};
+                $scope.error = data;
+            });
+
+
+            }; // end add details function
+
+
         }
 ]);
     finalapp.controller('userController', ['$scope', '$http',
