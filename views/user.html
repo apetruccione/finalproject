@@ -15,9 +15,6 @@
        <label>Email:</label>
          <input type="email" name="email" 
                 ng-model="user.email"><br>
-       <label>Favorite Color:</label>
-         <input type="text" name="color" 
-                ng-model="user.color"><br>
         <label>First Name:</label>
          <input type="text" name="fname" 
                 ng-model="user.fname"><br>
@@ -29,6 +26,9 @@
   </div>
   <form method="POST" action="/user/delete">
     <input type="submit" value="Delete User">
+  </form>
+  <form method="GET" ACTION="/">
+    <input type="submit" value="Menu">
   </form>
   <hr><%= msg %>
   <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
