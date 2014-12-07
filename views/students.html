@@ -8,12 +8,12 @@
 <body>
 
     <div ng-controller="myController">
-    <h2>Here is a list of students.</h2>
+    <h1 id="Mainheading" align="center">Welcome to the student success tracker.</h1>
 
     <div id="wrapper">
 
     <div id="leftcolumn">
-    <div ng-repeat="stu in student">
+    <div id= "studentlist" ng-repeat="stu in student">
 
     <p>
         {{stu.fname}}
@@ -40,6 +40,9 @@
             <form ng-submit="RemoveDetailItem(singleStudent.username, $index)">
               <input type="submit" value="Remove Item">    
             </form>
+            <form ng-submit="EditDetailItem(singleStudent.username, $index)">
+              <input type="submit" value="Edit Item">    
+            </form>
           </div>          
         <br>
 
@@ -48,17 +51,20 @@
       </form>
       <form ng-show="detailInput"  ng-submit="AddDetailItem(singleStudent.username)">
           <label for="inputtype">Item Type</label>
-          <input ng-model="detailItemType" type="text" id="inputtype" placeholder="Item type:"><br>
+          <select ng-model="detailItemType" id="inputtype" ng-options="opt for opt in allowedtypes"></select><br>
           <label for="inputname">Item Name</label>
           <input ng-model="detailItemName" type="text" id="inputname" placeholder="Item name:"><br>
           <label for="description">Description</label>
-          <textarea ng-model="detailItemDescription" type="textarea" id="description" placeholder="Item description:"></textarea>
+          <textarea rows="5" cols="50" ng-model="detailItemDescription" type="textarea" id="description" placeholder="Item description:"></textarea>
           <input type="submit" value="Submit Item">          
 
       </form>
 
       </div>
-
+      
+      <form method="GET" ACTION="/">
+        <input type="submit" value="Menu">
+      </form>
 
 
       <div class="clearfix"></div> <!-- clear fix for floating divs -->
