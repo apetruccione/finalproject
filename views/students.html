@@ -28,11 +28,9 @@
     </div> <!--end ng-repeat -->
     </div> <!--end left column -->
 
-      <div id="rightcolumn">
-        {{singleStudent.fname}}
-        {{singleStudent.lname}} <br>
-        {{singleStudent.email}} <br>
-        {{singleStudent.username}} <br>
+      <div ng-show="visibleRightColumn" id="rightcolumn">
+        <div id="detailslabel">{{singleStudent.fname}} {{singleStudent.lname}} detail items.</div> 
+
           <div id="detaileditem" ng-repeat="detail in singleStudent.items">
             <strong>{{detail.itemtype}}</strong> <br>
             {{detail.itemname}} <br>

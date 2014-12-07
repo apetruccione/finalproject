@@ -7,7 +7,7 @@ var finalapp = angular.module('myApp', []);
             .success(function(data, status, headers, config) {
 
                 $scope.allowedtypes = ['Interview', 'Resume', 'Endorsments', 'Job Opening', 'Internship', 'Workshop', 'Event', 'Internship'];
-
+                $scope.visibleRightColumn = false;
                 $scope.student = data;
                 $scope.singleStudent = {}
                 $scope.error = "";
@@ -20,7 +20,7 @@ var finalapp = angular.module('myApp', []);
             $scope.Details = function(username){
             
             console.log("I was passed " + username);
-
+            $scope.visibleRightColumn = true;
             $http.get('/student/byID?username=' + username)
             .success(function(data, status, headers, config) {
                 $scope.singleStudent = data;
