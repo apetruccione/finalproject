@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
 
 var StudentItem = new Schema({
     itemname: String,
-    itemtype: {type: String, enum: ['Interview', 'Resume', 'Endorsments', 'Job Opening', 'Internship', 'Workshop', 'Event', 'Internship']},
+    itemtype: String,
     itemdescription: String
 });
 

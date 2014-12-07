@@ -27,18 +27,7 @@ input[type=submit]{
   margin-top:15px;
   margin-left:85px;
 }
-
-#Mainheading {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 48px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 500;
-  line-height: 26.3999996185303px;
-  color: maroon;
-}
-#studentlist {background-color: white; border: 2px solid grey; margin: 5px;}
-#leftcolumn {background-color: rgba(128,0,0,0.8); width: 30%; border: 1px solid maroon; float: left;}
-#rightcolumn {background-color: rgba(128,0,0,0.8); width: 65%; border: 1px solid maroon; float: right;}
-#detaileditem {background-color: white; border: 2px solid grey; margin: 5px;}
+#leftcolumn { width: 30%; border: 1px solid maroon; float: left;}
+#rightcolumn { width: 65%; border: 1px solid maroon; float: right;}
+#detaileditem {border: 2px solid grey; margin: 5px;}
 .clearfix { clear: both;}
