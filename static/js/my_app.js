@@ -5,6 +5,9 @@ var finalapp = angular.module('myApp', []);
         function($scope, $http) {
             $http.get('/students')
             .success(function(data, status, headers, config) {
+
+                $scope.allowedtypes = ['Interview', 'Resume', 'Endorsments', 'Job Opening', 'Internship', 'Workshop', 'Event', 'Internship'];
+
                 $scope.student = data;
                 $scope.singleStudent = {}
                 $scope.error = "";
